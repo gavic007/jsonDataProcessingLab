@@ -4,8 +4,6 @@ angular.module('jsonDataProcessingLabApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
-      'link': '/'},{
-      'title': 'studentData',
       'link': '/'
     }];
 
