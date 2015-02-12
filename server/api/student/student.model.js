@@ -4,9 +4,24 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var StudentSchema = new Schema({
-    name: String,
-    info: String,
-    active: Boolean
+    firstName: String
+//    lastName: String,
+//    dateOfBirth: String,
+//    gender: String,
+//    email: String,
+//    phone: String,
+//    address: String,
+//    courses: [
+//        {
+//            course: {
+//                name: String,
+//                subject: String,
+//                courseNumber: Number,
+//                credits: Number
+//            },
+//            grade: String
+//        }
+//    ]
 });
 
 module.exports = mongoose.model('Student', StudentSchema);
