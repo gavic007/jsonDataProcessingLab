@@ -22,7 +22,7 @@
         <button type="submit" class="btn btn-primary" ng-click="creditsComplete()">Courses Completed</button>
         <button type="submit" class="btn btn-primary" ng-click="studentMajor()">Major</button>
         <button type="submit" class="btn btn-primary" ng-click="GPA()">GPA</button>
-        <button type="submit" class="btn btn-primary" ng-click="studentStatus()">Student Affiliation</button>
+        <button type="submit" class="btn btn-primary" ng-click="studentStatus()">Credit Year</button>
       </span>
     </p>
   </form>
@@ -30,7 +30,7 @@
         <div class="col-lg-12">
 
             <ul class="list-group" ng-repeat="student in students">
-                <li>{{student.firstName}}</li>
+                <li>{{student.lastName}}, {{student.firstName}}, {{student.dateOfBirth}}, {{student.gender}}, {{student.email}}, {{student.phone}}, {{student.address}}</li>
             </ul>
         </div>
     </div>
