@@ -10,7 +10,7 @@ var StudentSchema = new Schema({
     gender: String,
     email: String,
     phone: String,
-    address: String
+    address: String,
 //    courses: [
 //        {
 //            course: {
@@ -22,6 +22,8 @@ var StudentSchema = new Schema({
 //            grade: String
 //        }
 //    ]
+  major1: String,
+  major2: String
 });
 
 module.exports = mongoose.model('Student', StudentSchema);
