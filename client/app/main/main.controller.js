@@ -4,10 +4,14 @@ angular.module('jsonDataProcessingLabApp')
   .controller('MainCtrl', function ($scope, $http, socket) {
     $scope.students = [];
 
+    $scope.predicate = '-lastName';
+
     $http.get('/api/student').success(function(students) {
       $scope.students = students;
       socket.syncUpdates('student', $scope.students);
     });
+
+
     //
     //$scope.addThing = function() {
     //  if($scope.newThing === '') {

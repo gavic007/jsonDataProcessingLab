@@ -32,6 +32,21 @@
             <ul class="list-group" ng-repeat="student in students">
                 <li>{{student.lastName}}, {{student.firstName}}, {{student.dateOfBirth}}, {{student.gender}}, {{student.email}}, {{student.phone}}, {{student.address}}</li>
             </ul>
+          <div ng-controller="MainCtrl">
+            <pre>Sorting predicate = {{predicate}}; reverse = {{reverse}}</pre>
+            <hr/>
+            [ <a href="" ng-click="predicate=''">unsorted</a> ]
+            <table>
+              <tr>
+                <th><a href="" ng-click="predicate = 'firstName'; reverse=!reverse">Name</a>
+                </th>
+              </tr>
+              <tr ng-repeat="student in students | orderBy:predicate:reverse">
+                <td>{{student.firstName}}</td>
+                <td>{{student.lastName}}</td>
+              </tr>
+            </table>
+          </div>
         </div>
     </div>
 </div>
