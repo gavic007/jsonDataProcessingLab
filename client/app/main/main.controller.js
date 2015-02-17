@@ -9,6 +9,9 @@ angular.module('jsonDataProcessingLabApp')
     $http.get('/api/student').success(function(students) {
       $scope.students = students;
       socket.syncUpdates('student', $scope.students);
+      for(var i=0; i<$scope.students.length; i++){
+          $scope.students[i].push({totalCredits: $scope.addCredits($scope.students[i])});
+      }
     });
 
 
