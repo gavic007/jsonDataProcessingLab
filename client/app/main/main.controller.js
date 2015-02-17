@@ -23,7 +23,9 @@ angular.module('jsonDataProcessingLabApp')
             var credits=0;
 
             for(var i=0; i < student.courses.length; i++){
-                credits = credits + student.courses[i].course.credits;
+                if(student.courses[i].grade != "F" && student.courses[i].grade != "IP") {
+                    credits = credits + student.courses[i].course.credits;
+                }
             }
          return credits;
      };

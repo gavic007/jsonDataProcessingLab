@@ -34,13 +34,13 @@ You are provided with sample data that can be used to initialize your test datab
 You should add these as issues and milest
         <button type="submit" class="btn btn-primary" ng-click=ones on your github repository to help keep track of them.
 
-> As an administrator I would like to display a list of all students, ordered alphabetically by last name, first name.
+> As an administrator I would like to display a list of all students, ordered alphabetically by last name, first name. (DONE)
 
-> As an administrator I would like to display a list of all students, ordered by date of birth.
+> As an administrator I would like to display a list of all students, ordered by date of birth. (DONE)
 
-> As an administrator, I would like to display a list of all students, ordered by the number of credits that they have successfully completed (i.e. excluding the in-progress credits and grade F courses). 
+> As an administrator, I would like to display a list of all students, ordered by the number of credits that they have successfully completed (i.e. excluding the in-progress credits and grade F courses).
 
-> As an administrator I would like to view a list of students based on their major(s).
+> As an administrator I would like to view a list of students based on their major(s). (DONE)
 
 > As an administrator I would like to view detailed information for an individual student. 
 
