@@ -159,7 +159,7 @@ Student.find({}).remove(function() {
           },
           {
             "course": {
-              "name": "Models of Computing Systems",
+              "name": "Models ounsortedf Computing Systems",
               "subject": "CSCI",
               "courseNumber": 3401,
               "credits": 5
@@ -268,7 +268,7 @@ Student.find({}).remove(function() {
           {
             "course": {
               "name": "Intermediate French II",
-              "subject":Phone Number "FREN",
+              "subject": "FREN",
               "courseNumber": 2002,
               "credits": 4
             },
