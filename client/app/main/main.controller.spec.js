@@ -29,7 +29,7 @@ describe('Controller: MainCtrl', function () {
     expect(scope.students.length).toBe(4);
   });
 
-  it('should return an alphabetized list of student names', function(){
-
-  })
+    it('should return total number of credits', function(){
+        expect(scope.s)
+    })
 });

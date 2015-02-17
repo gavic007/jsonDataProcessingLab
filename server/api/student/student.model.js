@@ -11,17 +11,17 @@ var StudentSchema = new Schema({
     email: String,
     phone: String,
     address: String,
-//    courses: [
-//        {
-//            course: {
-//                name: String,
-//                subject: String,
-//                courseNumber: Number,
-//                credits: Number
-//            },
-//            grade: String
-//        }
-//    ]
+    courses: [
+        {
+            course: {
+                name: String,
+                subject: String,
+                courseNumber: Number,
+                credits: Number
+            },
+            grade: String
+        }
+    ],
   major1: String,
   major2: String
 });

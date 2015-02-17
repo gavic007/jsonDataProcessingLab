@@ -12,6 +12,16 @@ angular.module('jsonDataProcessingLabApp')
     });
 
 
+      $scope.addCredits = function(student){
+            var credits=0;
+
+            for(var i=0; i < student.courses.length; i++){
+                credits = credits + student.courses[i].course.credits;
+            }
+         return credits;
+     }
+
+
     //
     //$scope.addThing = function() {
     //  if($scope.newThing === '') {
