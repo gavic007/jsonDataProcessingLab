@@ -755,7 +755,7 @@ Student.find({}).remove(function() {
                     "grade": "A"
                 }
             ],
-            "major1": null,
+            "major1": "Undeclared",
             "major2": null
         },
         {
