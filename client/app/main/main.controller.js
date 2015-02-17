@@ -9,10 +9,14 @@ angular.module('jsonDataProcessingLabApp')
     $http.get('/api/student').success(function(students) {
       $scope.students = students;
       socket.syncUpdates('student', $scope.students);
-      for(var i=0; i<$scope.students.length; i++){
-          $scope.students[i].push({totalCredits: $scope.addCredits($scope.students[i])});
-      }
+
     });
+
+      $scope.sortByCredits = function(){
+        $scope.predicate = function(student){
+            return $scope.addCredits(student);
+        }
+      };
 
 
       $scope.addCredits = function(student){
@@ -22,7 +26,7 @@ angular.module('jsonDataProcessingLabApp')
                 credits = credits + student.courses[i].course.credits;
             }
          return credits;
-     }
+     };
 
 
     //

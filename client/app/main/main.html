@@ -25,7 +25,7 @@
                 [<a href="" ng-click="predicate=''">unsorted</a>]
                 <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'lastName'; reverse= false">Students Name</button></th>
                 <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'dateOfBirth'; reverse= false">Date of Birth</button></th>
-                <!--<th><button type="submit" class="btn btn-primary" ng-click="predicate = ; reverse= false">Credit Amount</button></th>-->
+                <th><button type="submit" class="btn btn-primary" ng-click="sortByCredits()">Credit Amount</button></th>
                 <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'Major'; reverse= false">Major</button></th>
                 <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'GPA'; reverse= false">GPA</button></th>
                 <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'creditYear'; reverse= false">Credit Year</button></th>
@@ -33,7 +33,7 @@
                 <td>{{student.lastName}},{{student.firstName}}</td>
                 <td>{{student.dateOfBirth}}</td>
                 <td>{{student.gender}}</td>
-                <td>{{student.totalCredits}}</td>
+                <td>{{addCredits(student)}}</td>
                 <td>{{student.address}}</td>
                 <td>{{student.email}}</td>
                 <td>{{student.phone}}</td>
