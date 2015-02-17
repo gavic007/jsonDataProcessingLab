@@ -41,6 +41,9 @@
                 <th><a href="" ng-click="predicate = 'lastName'; reverse=!reverse">Students Name</a>
                 </th>
               </tr>
+                <tr>
+                    <th><a href="" ng-click="predicate = 'dateOfBirth'; reverse=!reverse">Date of Birth</a></th>
+                </tr>
               <tr ng-repeat="student in students | orderBy:predicate:reverse">
                 <td>{{student.lastName}}</td>
                 <td>{{student.firstName}}</td>
