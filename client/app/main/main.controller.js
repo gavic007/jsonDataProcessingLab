@@ -60,7 +60,7 @@ angular.module('jsonDataProcessingLabApp')
                 totalCredits += student.courses[i].course.credits;
                 creditByGrade += (student.courses[i].course.credits * $scope.letterToNum(student.courses[i].grade));
             }
-            return creditByGrade / totalCredits;
+            return (creditByGrade / totalCredits).toFixed(2);
         };
 
     //
