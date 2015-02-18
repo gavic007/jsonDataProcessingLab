@@ -31,7 +31,7 @@ Run: ``yo`` in your project's main directory...
 You are provided with sample data that can be used to initialize your test database. Place this file into the config directory (next to mongo.js), and it will be used to seed your database.
 
 ## User Stories
-You should add these as issues and milest
+You should add these as issues and milestones
         <button type="submit" class="btn btn-primary" ng-click=ones on your github repository to help keep track of them.
 
 > As an administrator I would like to display a list of all students, ordered alphabetically by last name, first name. (DONE)
