@@ -24,6 +24,27 @@ angular.module('jsonDataProcessingLabApp')
             }
         };
 
+        $scope.sortByCreditYear = function(){
+            $scope.predicate = function(student){
+                return $scope.calculateCreditYear(student);
+            }
+        };
+
+        $scope.calculateCreditYear = function(student){
+            if($scope.addCredits(student) < 30){
+                return "Freshman"
+            }
+            else if($scope.addCredits(student) >= 30 || $scope.addCredits(student) < 60){
+                return "Sophomore"
+            }
+            else if($scope.addCredits(student) >= 60 || $scope.addCredits(student) < 90){
+                return "Junior"
+            }
+            else if($scope.addCredits(student) >= 90){
+                return "Senior"
+            }
+        };
+
       $scope.addCredits = function(student){
             var credits=0;
 
