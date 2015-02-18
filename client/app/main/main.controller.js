@@ -18,6 +18,11 @@ angular.module('jsonDataProcessingLabApp')
         }
       };
 
+        $scope.sortByGPA = function(){
+            $scope.predicate = function(student){
+                return $scope.calculateGpa(student);
+            }
+        };
 
       $scope.addCredits = function(student){
             var credits=0;
@@ -29,7 +34,34 @@ angular.module('jsonDataProcessingLabApp')
             }
          return credits;
      };
-
+        $scope.letterToNum = function(letter){
+            console.log(letter);
+            letter = letter.toUpperCase();
+            switch(letter) {
+                case "A":
+                    return 4.0;
+                case "B":
+                    return 3.0;
+                case "C":
+                    return 2.0;
+                case "D":
+                    return 1.0;
+                default:
+                    return 0.0;
+            }
+        };
+        $scope.calculateGpa = function(student){
+            if(student.courses.length == 0){
+                return 0;
+            }
+            var creditByGrade = 0;
+            var totalCredits = 0;
+            for(var i = 0; i< student.courses.length;i++){
+                totalCredits += student.courses[i].course.credits;
+                creditByGrade += (student.courses[i].course.credits * $scope.letterToNum(student.courses[i].grade));
+            }
+            return creditByGrade / totalCredits;
+        };
 
     //
     //$scope.addThing = function() {
