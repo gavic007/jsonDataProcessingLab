@@ -8,12 +8,17 @@
   </div>
 </header>
 
-<div id = "Ferrel">
-  DOB: 1989-07-10
-  Total Credits:
-</div>
+<!--<div id = "studentInfo">-->
+  <!--{{students[].firstName}} {{students[].lastName}}-->
+  <!--Date of Birth: {{students[].dateOfBirth}}-->
+  <!--Sex: {{students[].gender}}-->
+  <!--Email: {{students[].email}}-->
+  <!--Phone: {{students[].phone}}-->
+  <!--{{students[].address}}-->
+  <!--Majors: {{students[].major1}}, {{students[].major2}}-->
+<!--</div>-->
 
-<a href="" onclick="alert(document.getElementById('Ferrel').innerHTML);">Click a me !!</a>
+<a href="" onclick="alert(document.getElementById('studentInfo').innerHTML);">Click a me !!</a>
 
 <div class="container">
     <h1 class="page-header">The Data Set</h1>
@@ -31,7 +36,7 @@
                 <th><button type="submit" class="btn btn-primary" ng-click="sortByGPA()">GPA</button></th>
                 <th><button type="submit" class="btn btn-primary" ng-click="sortByCreditYear()">Credit Year</button></th>
               <tr ng-repeat="student in students | orderBy:predicate:reverse">
-                <td>{{student.lastName}}, {{student.firstName}}</td>
+                <td><a href="" ng-click="studentInfo(student)">{{student.lastName}}, {{student.firstName}}</a></td>
                 <td>{{student.dateOfBirth}}</td>
                 <td>{{addCredits(student)}}</td>
                 <td>{{student.major1}}, {{student.major2}}</td>

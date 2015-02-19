@@ -84,6 +84,21 @@ angular.module('jsonDataProcessingLabApp')
             return (creditByGrade / totalCredits).toFixed(2);
         };
 
+    $scope.studentInfo = function(student){
+      var html = '<div>' + student.firstName + " " + student.lastName + '<br></div>';
+      alert(html);
+    //  <div id = "studentInfo">
+    //  {{students[].firstName}} {{students[].lastName}}
+    //  Date of Birth: {{students[].dateOfBirth}}
+    //  Sex: {{students[].gender}}
+    //  Email: {{students[].email}}
+    //  Phone: {{students[].phone}}
+    //  {{students[].address}}
+    //  Majors: {{students[].major1}}, {{students[].major2}}
+    //  </div>
+
+  };
+
 
     //
     //$scope.addThing = function() {
