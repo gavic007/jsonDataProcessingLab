@@ -28,13 +28,15 @@
                 <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'dateOfBirth'; reverse= false">Date of Birth</button></th>
                 <th><button type="submit" class="btn btn-primary" ng-click="sortByCredits()">Credit Amount</button></th>
                 <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'major1'; reverse= false">Major</button></th>
-                <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'GPA'; reverse= false">GPA</button></th>
-                <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'creditYear'; reverse= false">Credit Year</button></th>
+                <th><button type="submit" class="btn btn-primary" ng-click="sortByGPA()">GPA</button></th>
+                <th><button type="submit" class="btn btn-primary" ng-click="sortByCreditYear()">Credit Year</button></th>
               <tr ng-repeat="student in students | orderBy:predicate:reverse">
                 <td>{{student.lastName}}, {{student.firstName}}</td>
                 <td>{{student.dateOfBirth}}</td>
                 <td>{{addCredits(student)}}</td>
                 <td>{{student.major1}}, {{student.major2}}</td>
+                <td>{{calculateGpa(student)}}</td>
+                <td>{{calculateCreditYear(student)}}</td>
                 <td>{{student.gender}}</td>
                 <td>{{student.address}}</td>
                 <td>{{student.email}}</td>
