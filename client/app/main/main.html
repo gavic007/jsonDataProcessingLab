@@ -21,12 +21,10 @@
 
 <div class="container">
     <h1 class="page-header">The Data Set </h1>
-
-    Search: <input ng-model="searchText">
-    <button type="submit" class="btn btn-primary" ng-click= "showList = true">Reset Information</button>
-    <div class="row">
         <div class="col-lg-12">
             <div  ng-hide="showList" >
+                <hr/>
+                <button type="submit" class="btn btn-primary" ng-click= "showList = true">Back To List</button>
                 <hr/>
                 <table>
                         Name: <tr>{{currentStudent.lastName}}, {{currentStudent.firstName}}</tr><br>
@@ -40,8 +38,8 @@
                         E-Mail: <tr>{{currentStudent.email}}</tr><br>
                         Phone: <tr>{{currentStudent.phone}}</tr><br><br>
                 </table>
-                <table>
-                    <th>Course Name</th><th> Subject </th><th> Course Number </th><th> Grade </th>
+                <table class = "table">
+                    <th>Course Name</th><th> Subject </th><th> Course Number </th><th> Credits </th><th> Grade </th>
                     <tr ng-repeat="course in currentStudent.courses">
                         <td>{{course.course.name}}</td>
                         <td>{{course.course.subject}}</td>
@@ -52,7 +50,7 @@
                 </table>
             </div>
         </div>
-    </div>
+
 </div>
 
 <div class="container">
@@ -61,15 +59,17 @@
         <div class="col-lg-12">
           <div  ng-show="showList" >
             <hr/>
-            <table>
+              Search: <input ng-model="searchText">
+              <!--Tables are important, remember table class = "table", for nice tables!-->
+            <table class = "table">
               <tr>
-                [<a href="" ng-click="predicate=''">unsorted</a>]
-                <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'lastName'; reverse= false">Students Name</button></th>
-                <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'dateOfBirth'; reverse= false">Date of Birth</button></th>
-                <th><button type="submit" class="btn btn-primary" ng-click="sortByCredits()">Credit Amount</button></th>
-                <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'major1'; reverse= false">Major</button></th>
-                <th><button type="submit" class="btn btn-primary" ng-click="sortByGPA()">GPA</button></th>
-                <th><button type="submit" class="btn btn-primary" ng-click="sortByCreditYear()">Credit Year</button></th>
+                <hr/>
+                    <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'lastName'; reverse= false">Students Name</button></th>
+                    <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'dateOfBirth'; reverse= false">Date of Birth</button></th>
+                    <th><button type="submit" class="btn btn-primary" ng-click="sortByCredits()">Credit Amount</button></th>
+                    <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'major1'; reverse= false">Major</button></th>
+                    <th><button type="submit" class="btn btn-primary" ng-click="sortByGPA()">GPA</button></th>
+                    <th><button type="submit" class="btn btn-primary" ng-click="sortByCreditYear()">Credit Year</button></th>
               <tr ng-repeat="student in students | orderBy:predicate:reverse | filter:searchText">
                 <td><a href="" ng-click="studentInfo(student)">{{student.lastName}}, {{student.firstName}}</a></td>
                 <td>{{student.dateOfBirth}}</td>
@@ -89,5 +89,6 @@
       <p>Angular Fullstack v2.0.13 |
         <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
          <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+      <h6>[This web page is a student project and not representative of the views of the University of Minnesota Morris]</h6>
   </div>
 </footer>
