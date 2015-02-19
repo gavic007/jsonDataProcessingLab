@@ -38,7 +38,7 @@ You should add these as issues and milestones
 
 > As an administrator I would like to display a list of all students, ordered by date of birth. (DONE)
 
-> As an administrator, I would like to display a list of all students, ordered by the number of credits that they have successfully completed (i.e. excluding the in-progress credits and grade F courses).
+> As an administrator, I would like to display a list of all students, ordered by the number of credits that they have successfully completed (i.e. excluding the in-progress credits and grade F courses).(DONE)
 
 > As an administrator I would like to view a list of students based on their major(s). (DONE)
 
@@ -46,9 +46,9 @@ You should add these as issues and milestones
 
 > As an administrator, i would like to view all courses that a student has taken or is taking, with grades, including failed courses.
 
-> As an administrator, I would like to display a list of students with their GPA. 
+> As an administrator, I would like to display a list of students with their GPA. (DONE)
 
-> As an administrator, I would like to display students' status based on their completed courses (freshman, sophomore, junior, senior) and sort/search by these parameters. 
+> As an administrator, I would like to display students' status based on their completed courses (freshman, sophomore, junior, senior) and sort/search by these parameters.
 
 > As an administrator, I would like to search student records based on courses that they are taking or have taken. 
 
