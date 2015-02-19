@@ -31,6 +31,7 @@ angular.module('jsonDataProcessingLabApp')
      };
 
 
+
     //
     //$scope.addThing = function() {
     //  if($scope.newThing === '') {
