@@ -86,40 +86,15 @@ angular.module('jsonDataProcessingLabApp')
             }
             return (creditByGrade / totalCredits).toFixed(2);
         };
-
+   $scope.courseInfo = function(student) {
+       $scope.showList = false;
+       $scope.currentStudent = student;
+   }
     $scope.studentInfo = function(student){
       $scope.showList = false;
       $scope.currentStudent = student;
 
-    //  <div id = "studentInfo">
-    //  {{students[].firstName}} {{students[].lastName}}
-    //  Date of Birth: {{students[].dateOfBirth}}
-    //  Sex: {{students[].gender}}
-    //  Email: {{students[].email}}
-    //  Phone: {{students[].phone}}
-    //  {{students[].address}}
-    //  Majors: {{students[].major1}}, {{students[].major2}}
-    //  </div>
 
-  };
-
-
-    //
-    //$scope.addThing = function() {
-    //  if($scope.newThing === '') {
-    //    return;
-    //  }
-    //  $http.post('/api/things', { name: $scope.newThing });
-    //  $scope.newThing = '';
-    //};
-    //
-    //$scope.deleteThing = function(thing) {
-    //  $http.delete('/api/things/' + thing._id);
-    //};
-    //
-    //$scope.$on('$destroy', function () {
-    //  socket.unsyncUpdates('thing');
-    //});
-
+    };
 
   });

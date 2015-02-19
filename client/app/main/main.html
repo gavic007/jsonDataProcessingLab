@@ -20,7 +20,9 @@
 
 
 <div class="container">
-    <h1 class="page-header">The Data Set</h1>
+    <h1 class="page-header">The Data Set </h1>
+
+    Search: <input ng-model="searchText">
     <button type="submit" class="btn btn-primary" ng-click= "showList = true">Reset Information</button>
     <div class="row">
         <div class="col-lg-12">
@@ -36,7 +38,17 @@
                         Gender: <tr>{{currentStudent.gender}}</tr><br>
                         Address: <tr>{{currentStudent.address}}</tr><br>
                         E-Mail: <tr>{{currentStudent.email}}</tr><br>
-                        Phone: <tr>{{currentStudent.phone}}</tr>
+                        Phone: <tr>{{currentStudent.phone}}</tr><br><br>
+                </table>
+                <table>
+                    <th>Course Name</th><th> Subject </th><th> Course Number </th><th> Grade </th>
+                    <tr ng-repeat="course in currentStudent.courses">
+                        <td>{{course.course.name}}</td>
+                        <td>{{course.course.subject}}</td>
+                        <td>{{course.course.courseNumber}}</td>
+                        <td>{{course.course.credits}}</td>
+                        <td>{{course.grade}}</td>
+                    </tr>
                 </table>
             </div>
         </div>
@@ -58,7 +70,7 @@
                 <th><button type="submit" class="btn btn-primary" ng-click="predicate = 'major1'; reverse= false">Major</button></th>
                 <th><button type="submit" class="btn btn-primary" ng-click="sortByGPA()">GPA</button></th>
                 <th><button type="submit" class="btn btn-primary" ng-click="sortByCreditYear()">Credit Year</button></th>
-              <tr ng-repeat="student in students | orderBy:predicate:reverse">
+              <tr ng-repeat="student in students | orderBy:predicate:reverse | filter:searchText">
                 <td><a href="" ng-click="studentInfo(student)">{{student.lastName}}, {{student.firstName}}</a></td>
                 <td>{{student.dateOfBirth}}</td>
                 <td>{{addCredits(student)}}</td>

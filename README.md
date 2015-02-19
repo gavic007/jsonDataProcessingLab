@@ -42,13 +42,13 @@ You should add these as issues and milestones
 
 > As an administrator I would like to view a list of students based on their major(s). (DONE)
 
-> As an administrator I would like to view detailed information for an individual student. 
+> As an administrator I would like to view detailed information for an individual student. (DONE)
 
-> As an administrator, i would like to view all courses that a student has taken or is taking, with grades, including failed courses.
+> As an administrator, i would like to view all courses that a student has taken or is taking, with grades, including failed courses. (DONE)
 
 > As an administrator, I would like to display a list of students with their GPA. (DONE)
 
-> As an administrator, I would like to display students' status based on their completed courses (freshman, sophomore, junior, senior) and sort/search by these parameters.
+> As an administrator, I would like to display students' status based on their completed courses (freshman, sophomore, junior, senior) and sort/search by these parameters.(DONE)
 
 > As an administrator, I would like to search student records based on courses that they are taking or have taken. 
 
