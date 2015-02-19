@@ -50,6 +50,6 @@ You should add these as issues and milestones
 
 > As an administrator, I would like to display students' status based on their completed courses (freshman, sophomore, junior, senior) and sort/search by these parameters.(DONE)
 
-> As an administrator, I would like to search student records based on courses that they are taking or have taken. 
+> As an administrator, I would like to search student records based on courses that they are taking or have taken. (DONE)
 
 
