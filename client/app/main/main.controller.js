@@ -7,6 +7,7 @@ angular.module('jsonDataProcessingLabApp')
     $scope.predicate = '-lastName';
     $scope.showList = true;
 
+    $scope.currentStudent = null;
 
     $http.get('/api/student').success(function(students) {
       $scope.students = students;
@@ -88,6 +89,7 @@ angular.module('jsonDataProcessingLabApp')
 
     $scope.studentInfo = function(student){
       $scope.showList = false;
+      $scope.currentStudent = student;
 
     //  <div id = "studentInfo">
     //  {{students[].firstName}} {{students[].lastName}}

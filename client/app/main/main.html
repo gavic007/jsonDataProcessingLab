@@ -27,19 +27,16 @@
             <div  ng-hide="showList" >
                 <hr/>
                 <table>
-                    <tr>
-                    <tr ng-repeat="student in students | orderBy:predicate:reverse">
-                        <td>{{student.lastName}}, {{student.firstName}}</td>
-                        <td>{{student.dateOfBirth}}</td>
-                        <td>{{addCredits(student)}}</td>
-                        <td>{{student.major1}}, {{student.major2}}</td>
-                        <td>{{calculateGpa(student)}}</td>
-                        <td>{{calculateCreditYear(student)}}</td>
-                        <td>{{student.gender}}</td>
-                        <td>{{student.address}}</td>
-                        <td>{{student.email}}</td>
-                        <td>{{student.phone}}</td>
-                    </tr>
+                        Name: <tr>{{currentStudent.lastName}}, {{currentStudent.firstName}}</tr><br>
+                        Date Of Birth: <tr>{{currentStudent.dateOfBirth}}</tr><br>
+                        Credits Completed: <tr>{{addCredits(currentStudent)}}</tr><br>
+                        Major(s): <tr>{{currentStudent.major1}}, {{currentStudent.major2}}</tr><br>
+                        GPA: <tr>{{calculateGpa(currentStudent)}}</tr><br>
+                        Credit Year: <tr>{{calculateCreditYear(currentStudent)}}</tr><br>
+                        Gender: <tr>{{currentStudent.gender}}</tr><br>
+                        Address: <tr>{{currentStudent.address}}</tr><br>
+                        E-Mail: <tr>{{currentStudent.email}}</tr><br>
+                        Phone: <tr>{{currentStudent.phone}}</tr>
                 </table>
             </div>
         </div>
@@ -68,10 +65,6 @@
                 <td>{{student.major1}}, {{student.major2}}</td>
                 <td>{{calculateGpa(student)}}</td>
                 <td>{{calculateCreditYear(student)}}</td>
-                <td>{{student.gender}}</td>
-                <td>{{student.address}}</td>
-                <td>{{student.email}}</td>
-                <td>{{student.phone}}</td>
               </tr>
             </table>
           </div>
